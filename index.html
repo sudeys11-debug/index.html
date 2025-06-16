@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic: Accelerating Job Opportunities in Kenya</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 350px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+                max-height: 400px;
+            }
+        }
+        .flow-line {
+            flex-grow: 1;
+            height: 2px;
+            background-color: #F49F0A;
+        }
+        .flow-arrow {
+            width: 0;
+            height: 0;
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid transparent;
+            border-left: 10px solid #F49F0A;
+        }
+        .swot-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+        @media (min-width: 768px) {
+            .swot-grid {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+            }
+        }
+        .spinner {
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-left-color: #00A6FB;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            animation: spin 1s linear infinite;
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 8px;
+        }
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body class="text-black font-bold">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold text-black">Talent<span style="color: #00A6FB;">AI</span></div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#overview" class="text-black hover:text-[#00A6FB] transition duration-300 font-bold">Overview</a>
+                    <a href="#benefits" class="text-black hover:text-[#00A6FB] transition duration-300 font-bold">Benefits</a>
+                    <a href="#features" class="text-black hover:text-[#00A6FB] transition duration-300 font-bold">Features</a>
+                    <a href="#model" class="text-black hover:text-[#00A6FB] transition duration-300 font-bold">Model</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8 max-w-5xl">
+
+        <section id="hero" class="text-center my-12 md:my-20">
+            <h1 class="text-4xl md:text-6xl font-black tracking-tight leading-tight mb-4">Accelerating Job Opportunities in Kenya</h1>
+            <p class="text-lg md:text-xl max-w-3xl mx-auto text-black font-bold">Our AI-driven upskilling platform empowers Kenyan talent with career-specific skills and real-world experience, creating a direct pipeline of proven performers for local and regional partner organizations.</p>
+        </section>
+
+        <section id="overview" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-2">The AI-Powered Flywheel</h2>
+            <p class="text-lg text-black font-bold text-center max-w-2xl mx-auto mb-12">This diagram illustrates the continuous cycle of learning, experience, and opportunity that drives our platform. Job seekers enter a dynamic ecosystem that develops their skills and connects them directly with employers seeking proven talent.</p>
+            <div class="bg-white rounded-lg shadow-lg p-6 md:p-8 overflow-x-auto">
+                <div class="flex items-center justify-center flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 min-w-max">
+                    <div class="text-center p-4 rounded-lg border-2 border-[#00A6FB] bg-blue-50 w-48 h-32 flex flex-col justify-center">
+                        <div class="text-4xl mb-2">🎓</div>
+                        <h3 class="font-bold">AI Skill Assessment</h3>
+                    </div>
+                    <div class="flex items-center w-full md:w-auto"> <div class="flow-line hidden md:block"></div> <div class="flow-arrow hidden md:block"></div> <div class="flow-arrow block md:hidden rotate-90 mx-auto"></div> </div>
+                    <div class="text-center p-4 rounded-lg border-2 border-[#F3C301] bg-yellow-50 w-48 h-32 flex flex-col justify-center">
+                        <div class="text-4xl mb-2">🗺️</div>
+                        <h3 class="font-bold">Personalized Learning Path</h3>
+                    </div>
+                     <div class="flex items-center w-full md:w-auto"> <div class="flow-line hidden md:block"></div> <div class="flow-arrow hidden md:block"></div> <div class="flow-arrow block md:hidden rotate-90 mx-auto"></div> </div>
+                    <div class="text-center p-4 rounded-lg border-2 border-[#F49F0A] bg-orange-50 w-48 h-32 flex flex-col justify-center">
+                         <div class="text-4xl mb-2">🏗️</div>
+                        <h3 class="font-bold">Real-World Projects</h3>
+                    </div>
+                     <div class="flex items-center w-full md:w-auto"> <div class="flow-line hidden md:block"></div> <div class="flow-arrow hidden md:block"></div> <div class="flow-arrow block md:hidden rotate-90 mx-auto"></div> </div>
+                    <div class="text-center p-4 rounded-lg border-2 border-[#F45D01] bg-red-50 w-48 h-32 flex flex-col justify-center">
+                         <div class="text-4xl mb-2">📈</div>
+                        <h3 class="font-bold">Performance Tracking</h3>
+                    </div>
+                     <div class="flex items-center w-full md:w-auto"> <div class="flow-line hidden md:block"></div> <div class="flow-arrow hidden md:block"></div> <div class="flow-arrow block md:hidden rotate-90 mx-auto"></div> </div>
+                    <div class="text-center p-4 rounded-lg border-2 border-green-500 bg-green-50 w-48 h-32 flex flex-col justify-center">
+                         <div class="text-4xl mb-2">🤝</div>
+                        <h3 class="font-bold">Direct Employment Offers</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="benefits" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-12">A Win-Win Ecosystem</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow-lg p-6 md:flex md:items-center md:gap-6">
+                    <div class="md:w-1/2">
+                        <h3 class="text-2xl font-bold mb-4 text-center">Benefits for Job Seekers</h3>
+                        <p class="text-black font-bold mb-6 text-center">We provide entry-level talent with the tools and experience needed to launch successful careers, turning potential into a verifiable track record.</p>
+                    </div>
+                    <div class="chart-container md:w-1/2 mt-6 md:mt-0">
+                        <canvas id="seekerBenefitsChart"></canvas>
+                    </div>
+                    <p class="text-center text-sm text-black font-bold mt-2 md:col-span-2">Data illustrates the direct impact our platform has on key career metrics for participants after program completion.</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 md:flex md:items-center md:gap-6">
+                    <div class="md:w-1/2">
+                        <h3 class="text-2xl font-bold mb-4 text-center">Benefits for Partner Companies</h3>
+                        <p class="text-black font-bold mb-6 text-center">Partners gain a strategic advantage by accessing a pipeline of pre-vetted, skilled talent, drastically improving hiring efficiency and quality.</p>
+                    </div>
+                    <div class="chart-container md:w-1/2 mt-6 md:mt-0">
+                        <canvas id="companyBenefitsChart"></canvas>
+                    </div>
+                    <p class="text-center text-sm text-black font-bold mt-2 md:col-span-2">Metrics show significant improvements in talent acquisition efficiency and cost-effectiveness for our partner organizations.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-12">Core Platform Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <h3 class="font-bold text-xl mb-2">AI-Driven Learning</h3>
+                    <div class="chart-container h-48 max-h-48">
+                        <canvas id="learningPathChart"></canvas>
+                    </div>
+                    <p class="text-black font-bold mb-4 mt-4">Adaptive curriculum tailored to individual skill gaps and career goals.</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <h3 class="font-bold text-xl mb-2">Project Experience</h3>
+                     <div class="chart-container h-48 max-h-48">
+                        <canvas id="projectTypeChart"></canvas>
+                    </div>
+                    <p class="text-black font-bold mb-4 mt-4">Build a portfolio by working on real projects from partner companies.</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <h3 class="font-bold text-xl mb-2">Continuous Feedback</h3>
+                    <p class="text-black font-bold mb-4">Automated assessments and performance tracking create a live skill profile.</p>
+                    <div class="text-7xl font-black" style="color:#00A6FB;">94%</div>
+                    <p class="font-semibold mt-2 text-black font-bold">Positive Feedback Loop</p>
+                    <p class="text-sm text-black font-bold">of users report that continuous AI feedback accelerated their skill development.</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <h3 class="font-bold text-xl mb-2">Direct Hiring</h3>
+                    <p class="text-black font-bold mb-4">A direct pipeline for companies to hire proven talent from the platform.</p>
+                     <div class="text-7xl font-black" style="color:#F45D01;">3x</div>
+                     <p class="font-semibold mt-2 text-black font-bold">Faster Hiring Cycle</p>
+                     <p class="text-sm text-black font-bold">Partners report hiring platform graduates three times faster than via traditional channels.</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <h3 class="font-bold text-xl mb-2">✨ Skill Path Generator ✨</h3>
+                    <p class="text-black font-bold mb-4">Discover personalized skill gaps and a learning roadmap for your desired career.</p>
+                    <textarea id="skillPathInput" class="w-full h-24 p-2 border border-gray-300 rounded-lg text-sm text-gray-700 font-normal focus:ring-blue-500 focus:border-blue-500" placeholder="e.g., I'm a recent graduate in IT, interested in data analysis."></textarea>
+                    <button class="w-full bg-[#00A6FB] text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-300 mt-4 flex items-center justify-center" onclick="generateSkillPath()">
+                        Generate Skill Path <span id="skillPathSpinner" class="spinner hidden"></span>
+                    </button>
+                    <div id="skillPathOutput" class="text-sm text-left mt-4 p-3 bg-gray-100 rounded-lg text-gray-800 font-normal overflow-auto max-h-40"></div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <h3 class="font-bold text-xl mb-2">✨ Project Idea Generator ✨</h3>
+                    <p class="text-black font-bold mb-4">Get tailored project ideas for your industry or business challenge.</p>
+                    <textarea id="projectIdeaInput" class="w-full h-24 p-2 border border-gray-300 rounded-lg text-sm text-gray-700 font-normal focus:ring-blue-500 focus:border-blue-500" placeholder="e.g., Manufacturing company struggling with supply chain efficiency."></textarea>
+                    <button class="w-full bg-[#00A6FB] text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-300 mt-4 flex items-center justify-center" onclick="generateProjectIdeas()">
+                        Generate Project Ideas <span id="projectIdeaSpinner" class="spinner hidden"></span>
+                    </button>
+                    <div id="projectIdeaOutput" class="text-sm text-left mt-4 p-3 bg-gray-100 rounded-lg text-gray-800 font-normal overflow-auto max-h-40"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="swot" class="mb-16">
+             <h2 class="text-3xl font-bold text-center mb-2">Strategic Analysis (SWOT)</h2>
+             <p class="text-lg text-black font-bold text-center max-w-2xl mx-auto mb-12">A look at the platform's strategic position, highlighting internal strengths and weaknesses alongside external opportunities and threats, and how we navigate them.</p>
+            <div class="swot-grid">
+                <div class="bg-green-100 border-l-4 border-green-500 rounded-r-lg p-6 shadow-md">
+                    <h3 class="font-bold text-xl mb-2 text-black">Strengths</h3>
+                    <ul class="list-disc list-inside text-black font-bold space-y-1">
+                        <li>Unique project-based learning model</li>
+                        <li>Strong win-win value proposition for users & partners</li>
+                        <li>Scalable AI-driven personalization</li>
+                        <li>Reduces hiring friction and cost</li>
+                    </ul>
+                </div>
+                <div class="bg-yellow-100 border-l-4 border-yellow-500 rounded-r-lg p-6 shadow-md">
+                    <h3 class="font-bold text-xl mb-2 text-black">Weaknesses</h3>
+                    <ul class="list-disc list-inside text-black font-bold space-y-1">
+                        <li>Requires a critical mass of both users and partners</li>
+                        <li>Quality control for curated projects is crucial</li>
+                        <li>Initial high investment in AI technology</li>
+                    </ul>
+                </div>
+                <div class="bg-blue-100 border-l-4 border-blue-500 rounded-r-lg p-6 shadow-md">
+                    <h3 class="font-bold text-xl mb-2 text-black">Opportunities</h3>
+                    <ul class="list-disc list-inside text-black font-bold space-y-1">
+                        <li>Growing global skills gap in tech</li>
+                        <li>Increased corporate focus on diverse talent pipelines</li>
+                        <li>Expansion into new industries and skill verticals</li>
+                        <li>Integration with corporate L&D programs</li>
+                    </ul>
+                </div>
+                <div class="bg-red-100 border-l-4 border-red-500 rounded-r-lg p-6 shadow-md">
+                    <h3 class="font-bold text-xl mb-2 text-black">Threats</h3>
+                    <ul class="list-disc list-inside text-black font-bold space-y-1">
+                        <li>Competition from traditional online courses and bootcamps</li>
+                        <li>Rapid changes in technology making skills obsolete</li>
+                        <li>Economic downturns affecting company hiring budgets</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="model" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-12">Sustainable Business Model</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                 <div class="bg-white rounded-lg shadow-lg p-6">
+                    <div class="chart-container">
+                        <canvas id="revenueModelChart"></canvas>
+                    </div>
+                     <p class="text-center text-sm text-black font-bold mt-2">Projected revenue mix, demonstrating a balanced and scalable financial structure.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-2xl font-bold mb-4">Diversified Revenue Streams</h3>
+                    <p class="text-black font-bold mb-6">Our model is designed for long-term sustainability by creating value for all stakeholders. Revenue is generated through a mix of user subscriptions for premium features and fees from our corporate partners, who benefit from a high-quality talent pipeline and project solutions.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start"><span class="text-xl mr-3" style="color:#00A6FB;">●</span><div><strong class="font-semibold text-black">Job Seeker Subscriptions:</strong> Freemium model with premium tiers for unlimited projects and career coaching.</div></li>
+                        <li class="flex items-start"><span class="text-xl mr-3" style="color:#F3C301;">●</span><div><strong class="font-semibold text-black">Partner Project Fees:</strong> Companies pay to submit projects, gaining valuable work outputs.</div></li>
+                        <li class="flex items-start"><span class="text-xl mr-3" style="color:#F49F0A;">●</span><div><strong class="font-semibold text-black">Talent Acquisition Fees:</strong> A success-based fee when a company hires a candidate directly from the platform.</div></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-800 text-white mt-16">
+        <div class="container mx-auto p-8 text-center">
+            <p class="font-bold text-xl mb-2 text-white">Talent<span style="color: #00A6FB;">AI</span></p>
+            <p class="text-white font-bold">&copy; 2025 TalentAI. Reshaping the future of work, one skill at a time.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            
+            const tooltipConfig = {
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            title: function(tooltipItems) {
+                                const item = tooltipItems[0];
+                                let label = item.chart.data.labels[item.dataIndex];
+                                if (Array.isArray(label)) {
+                                  return label.join(' ');
+                                } else {
+                                  return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            };
+            
+            const wrapLabel = (label) => {
+                const maxLen = 16;
+                if (label.length <= maxLen) return label;
+                
+                const words = label.split(' ');
+                let lines = [];
+                let currentLine = '';
+
+                words.forEach(word => {
+                    if ((currentLine + ' ' + word).trim().length > maxLen) {
+                        lines.push(currentLine.trim());
+                        currentLine = word;
+                    } else {
+                        currentLine = (currentLine + ' ' + word).trim();
+                    }
+                });
+                if (currentLine) lines.push(currentLine.trim());
+                return lines;
+            };
+
+            const seekerBenefitsCtx = document.getElementById('seekerBenefitsChart');
+            if(seekerBenefitsCtx) {
+                new Chart(seekerBenefitsCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: [
+                            'Enhanced Employability',
+                            'Practical Experience',
+                            ['Direct Path to', 'Employment'],
+                            ['Skills for', 'Modern Economy']
+                        ].map(l => Array.isArray(l) ? l : wrapLabel(l)),
+                        datasets: [{
+                            label: 'Impact Score',
+                            data: [88, 95, 82, 90],
+                            backgroundColor: ['#00A6FB', '#F3C301', '#F49F0A', '#80C21C'],
+                            borderColor: ['#00A6FB', '#F3C301', '#F49F0A', '#80C21C'],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        indexAxis: 'y',
+                        scales: {
+                            x: {
+                                beginAtZero: true,
+                                max: 100,
+                                ticks: {
+                                    color: 'black',
+                                    font: {
+                                        weight: 'bold'
+                                    }
+                                }
+                            },
+                            y: {
+                                ticks: {
+                                    color: 'black',
+                                    font: {
+                                        weight: 'bold'
+                                    }
+                                }
+                            }
+                        },
+                        plugins: {
+                            ...tooltipConfig.plugins,
+                            legend: {
+                                display: false
+                            }
+                        }
+                    }
+                });
+            }
+
+            const companyBenefitsCtx = document.getElementById('companyBenefitsChart');
+            if(companyBenefitsCtx) {
+                new Chart(companyBenefitsCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: [
+                            ['Reduced', 'Time-to-Hire'],
+                            ['Improved Quality', 'of Hire'],
+                            ['Lower', 'Recruitment Costs'],
+                            ['Access to', 'Local Talent']
+                        ].map(l => Array.isArray(l) ? l : wrapLabel(l)),
+                        datasets: [{
+                            label: 'Percentage Improvement',
+                            data: [65, 50, 58, 70],
+                            backgroundColor: ['#00A6FB', '#F3C301', '#F49F0A', '#80C21C'],
+                            borderColor: ['#00A6FB', '#F3C301', '#F49F0A', '#80C21C'],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                max: 100,
+                                ticks: {
+                                    color: 'black',
+                                    font: {
+                                        weight: 'bold'
+                                    }
+                                }
+                            },
+                            x: {
+                                ticks: {
+                                    color: 'black',
+                                    font: {
+                                        weight: 'bold'
+                                    }
+                                }
+                            }
+                        },
+                         plugins: {
+                            ...tooltipConfig.plugins,
+                            legend: {
+                                display: false
+                            }
+                        }
+                    }
+                });
+            }
+
+            const learningPathCtx = document.getElementById('learningPathChart');
+            if(learningPathCtx) {
+                new Chart(learningPathCtx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Technical Skills', 'Practical Application', 'Problem-Solving & Soft Skills'],
+                        datasets: [{
+                            data: [55, 30, 15],
+                            backgroundColor: ['#00A6FB', '#F49F0A', '#F45D01'],
+                            hoverOffset: 4
+                        }]
+                    },
+                     options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            ...tooltipConfig.plugins,
+                            legend: {
+                                position: 'bottom',
+                                labels: {
+                                    padding: 15,
+                                    color: 'black',
+                                    font: {
+                                        weight: 'bold'
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+            
+            const projectTypeCtx = document.getElementById('projectTypeChart');
+            if(projectTypeCtx) {
+                new Chart(projectTypeCtx, {
+                    type: 'pie',
+                    data: {
+                        labels: ['SMEs', 'Corporations', 'NGOs & Startups'],
+                        datasets: [{
+                            data: [45, 30, 25],
+                            backgroundColor: ['#F3C301', '#00A6FB', '#F49F0A'],
+                            hoverOffset: 4
+                        }]
+                    },
+                     options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                         plugins: {
+                            ...tooltipConfig.plugins,
+                            legend: {
+                                position: 'bottom',
+                                labels: {
+                                    padding: 15,
+                                    color: 'black',
+                                    font: {
+                                        weight: 'bold'
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+            
+            const revenueModelCtx = document.getElementById('revenueModelChart');
+            if(revenueModelCtx) {
+                new Chart(revenueModelCtx, {
+                    type: 'pie',
+                    data: {
+                        labels: ['Talent Acquisition Fees', 'Project Service Fees', 'Upskilling Subscriptions'],
+                        datasets: [{
+                            data: [55, 30, 15],
+                             backgroundColor: ['#00A6FB', '#F49F0A', '#F3C301'],
+                            hoverOffset: 4
+                        }]
+                    },
+                     options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                         plugins: {
+                            ...tooltipConfig.plugins,
+                            legend: {
+                                position: 'bottom',
+                                 labels: {
+                                    padding: 15,
+                                    color: 'black',
+                                    font: {
+                                        weight: 'bold'
+                                    },
+                                    generateLabels: function(chart) {
+                                        const data = chart.data;
+                                        if (data.labels.length && data.datasets.length) {
+                                            return data.labels.map(function(label, i) {
+                                                const meta = chart.getDatasetMeta(0);
+                                                const style = meta.controller.getStyle(i);
+                                                
+                                                const wrappedLabel = wrapLabel(label);
+                                                
+                                                return {
+                                                    text: Array.isArray(wrappedLabel) ? wrappedLabel.join(' ') : wrappedLabel,
+                                                    fillStyle: style.backgroundColor,
+                                                    strokeStyle: style.borderColor,
+                                                    lineWidth: style.borderWidth,
+                                                    hidden: isNaN(data.datasets[0].data[i]) || meta.data[i].hidden,
+                                                    index: i
+                                                };
+                                            });
+                                        }
+                                        return [];
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+            
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80, 
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+
+        async function generateSkillPath() {
+            const inputElement = document.getElementById('skillPathInput');
+            const outputElement = document.getElementById('skillPathOutput');
+            const spinnerElement = document.getElementById('skillPathSpinner');
+            const prompt = `As an expert career coach, analyze the user's input skills and desired career. Identify potential skill gaps and suggest a personalized learning path with 3-5 key modules, categorized by Technical Skills, Practical Application, and Problem-Solving & Soft Skills relevant to the Kenyan job market. Be concise and use bullet points. User Input: ${inputElement.value}`;
+
+            outputElement.textContent = '';
+            spinnerElement.classList.remove('hidden');
+
+            try {
+                let chatHistory = [];
+                chatHistory.push({ role: "user", parts: [{ text: prompt }] });
+                const payload = { contents: chatHistory };
+                const apiKey = "";
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                const result = await response.json();
+                if (result.candidates && result.candidates.length > 0 &&
+                    result.candidates[0].content && result.candidates[0].content.parts &&
+                    result.candidates[0].content.parts.length > 0) {
+                    outputElement.textContent = result.candidates[0].content.parts[0].text;
+                } else {
+                    outputElement.textContent = "Error: No response from API or unexpected format.";
+                }
+            } catch (error) {
+                console.error("Error calling Gemini API:", error);
+                outputElement.textContent = "Error generating skill path. Please try again.";
+            } finally {
+                spinnerElement.classList.add('hidden');
+            }
+        }
+
+        async function generateProjectIdeas() {
+            const inputElement = document.getElementById('projectIdeaInput');
+            const outputElement = document.getElementById('projectIdeaOutput');
+            const spinnerElement = document.getElementById('projectIdeaSpinner');
+            const prompt = `As an expert business consultant, given the industry and challenge, propose 3 real-world project ideas suitable for entry-level upskilling participants on an AI platform in Kenya. Each idea should outline a brief objective and the types of skills (technical, practical, soft) it would build. Be concise and use bullet points. Industry/Challenge: ${inputElement.value}`;
+
+            outputElement.textContent = '';
+            spinnerElement.classList.remove('hidden');
+
+            try {
+                let chatHistory = [];
+                chatHistory.push({ role: "user", parts: [{ text: prompt }] });
+                const payload = { contents: chatHistory };
+                const apiKey = "";
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                const result = await response.json();
+                if (result.candidates && result.candidates.length > 0 &&
+                    result.candidates[0].content && result.candidates[0].content.parts &&
+                    result.candidates[0].content.parts.length > 0) {
+                    outputElement.textContent = result.candidates[0].content.parts[0].text;
+                } else {
+                    outputElement.textContent = "Error: No response from API or unexpected format.";
+                }
+            } catch (error) {
+                console.error("Error calling Gemini API:", error);
+                outputElement.textContent = "Error generating project ideas. Please try again.";
+            } finally {
+                spinnerElement.classList.add('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
